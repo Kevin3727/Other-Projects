@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>NYC Travel Time</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+
+        <h2>Travel Time</h2>
+        <form action="/" method="POST">
+        <div class="form-group">
+          <input type="address" name="address_orig" placeholder="Address of Origin" class="form-control" style="max-width: 300px;"  autofocus required>
+          <br>
+          <input type="address" name="address_dest" placeholder="Address of Destination" class="form-control" style="max-width: 300px;"  autofocus required>
+          <br>
+          <select name="day">
+            <option value="0">Monday</option>
+            <option value="1">Tuesday</option>
+            <option value="2">Wednesday</option>
+            <option value="3">Thursday</option>
+            <option value="4">Friday</option>
+            <option value="5">Saturday</option>
+            <option value="6">Sunday</option>
+          </select>
+          <br><br>
+          <input type="time" name="time" class="form-control" style="max-width: 150px;"  autofocus required>
+        </div>
+        <button type="submit" class="btn btn-default">Calculate Travel Time</button>
+        </form>
+        <br>
+        <h5>Travel time from</h5>
+        <h4>{{ loc[0] }} </h4>
+        <h5>to</h5>
+        <h4>{{ loc[1] }} </h4>
+        <h5> leaving on </h5> <h4>{{ dt[0] }} at {{ dt[1] }} is </h4>
+        <h3><b>{{ output[0] }}</b></h3>
+        <br><br>
+        <h4>It, most likely, will take between <b>{{ output[1] }}</b> and <b>{{ output[2] }}</b>.</h4>
+      </form>
+      <br>
+      
+</div>
+</body>
+</html>
+
+
