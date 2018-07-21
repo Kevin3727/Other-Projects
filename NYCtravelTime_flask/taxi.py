@@ -6,7 +6,7 @@ from sklearn.externals import joblib
 import numpy as np
 import pickle
 
-api_key = 'AIzaSyBCMFjJGoVWaTZkTbWvLtIifxQ92krQU0E'
+api_key = 'API...'
 
 gm = googlemaps.Client(key=api_key)
 
